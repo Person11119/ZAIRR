@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Slider</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+        body {
+            background-image: url('https://i.imgur.com/i8oV5Ln.jpeg');
+            background-size: cover;
+            background-position: center;
+            transition: background-image 1s ease-in-out;
+            color: white; /* Makes text more readable on the background */
+            font-family: Arial, sans-serif; /* Adds a better font for readability */
+            padding: 20px; /* Adds padding to avoid text being too close to the edges */
+        }
+        h1 {
+            font-size: 2em; /* Adjusts the size of the heading */
+        }
+        ul {
+            list-style-type: disc; /* Adds bullet points to the list items */
+        }
+        p {
+            margin-bottom: 1em; /* Adds space between paragraphs */
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const images = [
+            'https://i.imgur.com/i8oV5Ln.jpeg',
+            'https://i.imgur.com/Tckr6tf.jpeg'
+        ];
+
+        let currentIndex = 0;
+        const intervalTime = 3000; // Change interval here (in milliseconds)
+
+        function changeBackground() {
+            currentIndex = (currentIndex + 1) % images.length;
+            document.body.style.backgroundImage = `url(${images[currentIndex]})`;
+        }
+
+        setInterval(changeBackground, intervalTime);
+    </script>
+    
+    <h1>Zair's Biography</h1>
+    <p>Oh hi there, my name is Zair Fareed and I'm 12 years old. I live in Banigala, Islamabad, Pakistan. My hobbies are:</p>
+    <ul>
+        <li>Football</li>
+        <li>Eating</li>
+        <li>Playing video games</li>
+        <li>Sketching</li>
+        <li>Some other stuff</li>
+    </ul>
+    <p>I love sketching and playing football with my friends. I better mention them or they will be mad I didn’t let them have their share of being on a website. They are: Haysam, Rayan, Arham, and of course Shaki. I want to be an engineer when I grow up, and I want to live in the US. Why? Because they have Takis, Cheetos, and LOTS of chocolates, and it's clean. I have one brother (Shahab) and one sister (Shafaat). My favorite foods are: Pizza, Japanese food (e.g., sushi), and chocolate éclairs. My favorite subjects in school are: History, Computer Science, and Math. Now I guess you know stuff about me. Soo Bye!...Are you still here?</p>
+</body>
+</html>
